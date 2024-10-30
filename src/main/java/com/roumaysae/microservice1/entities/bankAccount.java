@@ -5,12 +5,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import java.awt.geom.GeneralPath;
 import java.util.Date;
+import java.util.UUID;
+
 @Builder
 @Entity
 @Data
@@ -21,7 +21,7 @@ public class bankAccount {
     @Id
     private String accountId;
     private Date creationDate;
-    private double balance;
+    private Double balance;
     private String currency;
     @Enumerated(EnumType.STRING)
     private AccountType accountType;
